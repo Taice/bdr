@@ -70,5 +70,5 @@ pub fn write_bd_to_file(path: [:0]const u8, name: []const u8, date: []const u8) 
     var buffer: [100]u8 = undefined;
 
     // Write some text to the file
-    try file.writer().writeAll(try std.fmt.bufPrint(&buffer, "{s}={s}\n", .{ date, name }));
+    try file.writeAll(try std.fmt.bufPrint(&buffer, "{s}={s}\n", .{ date, name }));
 }
