@@ -29,7 +29,7 @@ pub fn main() void {
         .cli => |c| {
             const date = date_utils.get_curr_date();
             var list = file_utils.read_file_to_list(c.file) catch {
-                std.debug.print("\x1b[33mCouldn't read file.\x1b[0m\n", .{});
+                std.debug.print("\x1b[33mCan't read file.\x1b[0m\n", .{});
                 return;
             };
 
